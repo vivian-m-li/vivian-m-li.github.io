@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Research = () => {
-  return (
-    <div>
-      research page
-    </div>
-  );
+  return <div>research page</div>;
 };
 
 export default Research;

@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Nanum Gothic";
+  src:url("../fonts/Nanum_Gothic/NanumGothic-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Satisfy";
+  src:url("../fonts/Satisfy/Satisfy-Regular.ttf");
+}
+
+:root {
+  --opaqueblue: #29b6f64d;
+  --lightblue: #87ceeb;
+  --mediumblue: #29b6f6;
+  --darkblue: #378eb6;
+  --lightgray: #8c8c8c;
+  --green: #26a69a;
+  --defaultfont: "Nanum Gothic", sans-serif;
+  --cursivefont: "Satisfy", "sans-serif";
+}
+
+body {
+  margin: 0;
+  font-family: var(--defaultfont);;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 13pt;
+}
+
+.nav-container  {
+  margin-bottom: 10px;
+
+  .nav-left, .nav-right {
+    display: inline-block;
+    width: 50%;
+    padding: 0;
+  }
+
+  .nav-right {
+    text-align: right;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 15px;
+  }
+
+  .nav-left a {
+    font-family: var(--cursivefont);
+    font-size: 30pt;
+    color: var(--mediumblue)
+  }
+
+  .nav-right {
+    a, .divider {
+      color: black;
+      font-size: 13pt;
+      background-color: white;
+    }
+
+    a:hover {
+      color: var(--mediumblue);
+      text-decoration: none;
+    }
+  }
+
+  .home {
+    font-size: 24px;
+  }
+}
+
+.footer-div {
+  margin-top: 20px;
+  text-align: center;
+
+  .divider {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .contact p {
+    display: inline-block;
+  }
+
+  .contact {
+    button {
+      margin-left: 5px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--lightblue);
+
+      i {
+        line-height: 40px;
+      }
+    }
+  }
+
+  .copy{
+    margin-top: 0;
+    font-size: 11pt;
+    color: var(--lightgray)
+  }
+}
+
+.home-page {
+  display: flex;
+
+  .image-container,
+  .text-container {
+    flex: 1;
+  }
+
+  .image-container img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+  }
+
+  .text-container {
+    padding: 20px 80px 20px 20px;
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-family: var(--cursivefont);
+      font-size: 36pt;
+      margin: 30px 0;
+    }
+
+    li {
+      margin: 15px 0;
+
+      i {
+        color: var(--darkblue);
+      }
+    }
+  }
+
+  .buttons {
+    margin: 30px 0;
+
+    button {
+      margin-right: 10px;
+    }
+
+    button:nth-child(1) {
+      background-color: var(--lightblue);
+    }
+
+    button:nth-child(2) {
+      background-color: var(--darkblue);
+      
+    }
+
+    button:nth-child(3) {
+      background-color: var(--green);
+    }
+
+    button a {
+      color: white;
+    }
+  }
+}
+
+.about-page {
+  .text-container{
+    padding: 0 20px;
+  }
+}
+
+.research-page {
+}
+
+.resume-page {
+}
+

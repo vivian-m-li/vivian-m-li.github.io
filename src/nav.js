@@ -1,16 +1,25 @@
-import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div className="nav">
-      <ul>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
-        <li><Link to="/">Vivian Li</Link></li>
-        <li><Link to="/research">Research</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-      </ul>
+    <div>
+      <div className="nav-container">
+        <div className="nav-left">
+          <Link className="link" to="/">
+            Vivian Li
+          </Link>
+        </div>
+        <div className="nav-right">
+          <Link className="link" to="/about">
+            About
+          </Link>
+          <span className="divider">|</span>
+          <Link className="link" to="/research">
+            Research
+          </Link>
+        </div>
+      </div>
       <Outlet />
     </div>
   );
