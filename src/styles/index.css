@@ -471,17 +471,30 @@ body {
     }
   }
 
-  .about-page {
-    .image-container, .photo-grid {
+  .about-page, .research-page {
+
+    .text-container {
+      width: 100%;
+    }
+
+    .image-container, .photo-grid, img {
       width: 100% !important;
       margin: 0 !important;
     }
   }
 
-  .research-page {
-    img {
+  .projects-page {
+    .table-of-contents {
+      display: none;
+    }
+
+    .ex_card {
+      width: 100%;
+    }
+
+    .modal-content img {
       width: 100% !important;
-      margin: 0 !important;
+      margin: 0;
     }
   }
 }
