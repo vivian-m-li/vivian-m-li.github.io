@@ -5,8 +5,6 @@ const Projects = () => {
   useEffect(() => {
     const elems = document.querySelectorAll(".modal");
     M.Modal.init(elems);
-
-    window.scrollTo(0, 0);
   }, []);
 
   const openModal = (modalId) => {
