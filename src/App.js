@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./nav";
 import Home from "./pages/home";
 import About from "./pages/about";
-import Resume from "./pages/resume";
 import Research from "./pages/research";
+import Projects from "./pages/projects";
 import Footer from "./footer";
 
 const App = () => {
@@ -15,8 +15,8 @@ const App = () => {
           <Route path="/" element={<Nav />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
-            <Route path="resume" element={<Resume />} />
             <Route path="research" element={<Research />} />
+            <Route path="projects" element={<Projects />} />
           </Route>
         </Routes>
       </BrowserRouter>

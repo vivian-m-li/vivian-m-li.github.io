@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-materialize";
 import HomeImage from "../images/home.jpg";
+import Resume from "../uploads/resume.pdf";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -35,10 +36,8 @@ const Home = () => {
             </ul>
           </div>
           <div className="buttons">
-            <Button>
-              <Link className="link" to="/resume">
-                Resume
-              </Link>
+            <Button onClick={() => window.open(Resume, "_blank")}>
+              Resume
             </Button>
             <Button>
               <Link className="link" to="/about">
