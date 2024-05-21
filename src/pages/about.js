@@ -13,7 +13,7 @@ const openExternalLink = (link) => {
 
 const About = () => {
   return (
-    <div className="about-page">
+    <div className="about-page page-content">
       <div className="text-container">
         <p>
           <span className="name">Hi, I'm Vivian.</span> I'm a 2nd year Ph.D.
@@ -103,7 +103,8 @@ const About = () => {
         <p>
           In my free time, I enjoy soaking up the Colorado sunshine through
           backpacking, climbing, and canyoneering. Before starting graduate
-          school, I took a gap year and hiked the Pacific Crest Trail.
+          school, I took a gap year and hiked the Pacific Crest Trail, a 2,650
+          mile trail from Mexico to Canada.
         </p>
         <div className="photo-grid">
           <div className="photo-container">

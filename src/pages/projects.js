@@ -5,6 +5,8 @@ const Projects = () => {
   useEffect(() => {
     const elems = document.querySelectorAll(".modal");
     M.Modal.init(elems);
+
+    window.scrollTo(0, 0);
   }, []);
 
   const openModal = (modalId) => {
@@ -13,26 +15,39 @@ const Projects = () => {
     instance.open();
   };
 
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="projects-page">
+    <div className="projects-page page-content">
       <ul class="section table-of-contents">
         <li>
-          <a href="#featured">Featured</a>
+          <a href="#featured" onClick={(e) => handleScroll(e, "featured")}>
+            Featured
+          </a>
         </li>
         <li>
-          <a href="#prog">Programming</a>
+          <a href="#prog" onClick={(e) => handleScroll(e, "prog")}>
+            Programming
+          </a>
         </li>
         <li>
-          <a href="#webdev">Web Dev</a>
+          <a href="#webdev" onClick={(e) => handleScroll(e, "webdev")}>
+            Web Dev
+          </a>
         </li>
         <li>
-          <a href="#appdev">App Dev</a>
+          <a href="#appdev" onClick={(e) => handleScroll(e, "appdev")}>
+            App Dev
+          </a>
         </li>
       </ul>
 
       <div class="container">
-        <h2>Featured</h2>
-        <div class="section scrollspy" id="featured">
+        <div class="section" id="featured">
+          <h2>Featured</h2>
           <div class="ex_card" onClick={() => openModal("jpl_modal")}>
             <a href="#jpl_modal">
               <img src="images/jplm2020.png" alt="jplm2020" />
@@ -80,8 +95,8 @@ const Projects = () => {
 
         <div class="divider"></div>
 
-        <h2>Programming</h2>
-        <div class="section scrollspy" id="prog">
+        <div class="section" id="prog">
+          <h2>Programming</h2>
           <div class="ex_card" onClick={() => openModal("dbms_modal")}>
             <a href="#dbms_modal">
               <img src="images/dbms_icon.png" alt="dbms" />
@@ -118,8 +133,8 @@ const Projects = () => {
 
         <div class="divider"></div>
 
-        <h2>Web Development</h2>
-        <div class="section scrollspy" id="webdev">
+        <div class="section" id="webdev">
+          <h2>Web Development</h2>
           <div class="ex_card" onClick={() => openModal("gsk_modal")}>
             <a href="#gsk_modal">
               <img src="images/gsk_icon.png" alt="gsk" />
@@ -167,8 +182,8 @@ const Projects = () => {
 
         <div class="divider"></div>
 
-        <h2>App Development</h2>
-        <div class="section scrollspy" id="appdev">
+        <div class="section" id="appdev">
+          <h2>App Development</h2>
           <div class="ex_card" onClick={() => openModal("resource_modal")}>
             <a href="#resource_modal">
               <img src="images/resource_icon.jpg" alt="resource" />

@@ -33,6 +33,12 @@ body {
 
 .nav-container  {
   margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
 
   .nav-left, .nav-right {
     display: inline-block;
@@ -107,6 +113,10 @@ body {
   }
 }
 
+.page-content {
+  margin-top: 90px;
+}
+
 .home-page {
   display: flex;
 
@@ -132,9 +142,6 @@ body {
       font-family: var(--cursivefont);
       font-size: 36pt;
       margin: 30px 0;
-      text-decoration: underline;
-      text-decoration-thickness: 0.15rem;
-      text-decoration-color: var(--lightblue);
     }
 
     li {
@@ -173,8 +180,6 @@ body {
 }
 
 .about-page {
-  margin-top: 30px;
-
   .text-container {
     width: 80%;
     margin: auto;
@@ -216,13 +221,13 @@ body {
     }
 
     .photo-grid {
-      width: 80%;
+      width: 70%;
       margin: auto;
       padding-top: 10px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto;
-      gap: 10px;
+      gap: 5px;
       grid-auto-rows: minmax(100px, auto);
 
       .photo-container {
@@ -241,31 +246,26 @@ body {
 
       .photo {
         width: 100%;
-        height: auto;
       }
 
       .photo-container:nth-child(1) {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        aspect-ratio: 3 / 4;
       }
 
       .photo-container:nth-child(2).horizontal {
         grid-column: 2 / 4;
         grid-row: 1 / 2;
-        aspect-ratio: 3 / 2;
       }
 
       .photo-container:nth-child(3) {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        aspect-ratio: 2 / 3;
       }
 
       .photo-container:nth-child(4) {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-        aspect-ratio: 2 / 3;
       }
 
       .photo-container:nth-child(5) {
@@ -277,8 +277,6 @@ body {
 }
 
 .research-page {
-  margin-top: 30px;
-
   .text-container {
     width: 80%;
     margin: auto;
@@ -289,12 +287,27 @@ body {
 
       .title {
         font-size: 16pt;
-        color: var(--darkblue);
+        color: var(--mediumblue);
         font-weight: bolder;
       }
 
+      .title:hover {
+        color: var(--darkblue);
+        cursor: pointer;
+      }
+
+      .sub-heading {
+        color: var(--lightgray);
+      }
+
       .text {
-        margin-left: 20px;
+        margin-top: 10px;
+        line-height: 2.5rem;
+      }
+
+      img {
+        width: 50%;
+        margin: 10px 25%;
       }
     }
   }
