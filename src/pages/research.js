@@ -3,7 +3,12 @@ import EcoNetworkImg from "../images/deelab.png";
 import SVGif from "../images/sv.gif";
 
 const Research = () => {
-  const [expandedProjects, setExpandedProjects] = useState({});
+  const [expandedProjects, setExpandedProjects] = useState({
+    "species-interactions": true,
+    "structural-variants": true,
+    tau: true,
+    "social-evo": true,
+  });
 
   const toggleExpand = (id) => {
     setExpandedProjects((prev) => ({
@@ -20,37 +25,36 @@ const Research = () => {
             className="title"
             onClick={() => toggleExpand("species-interactions")}
           >
-            Studying Species Interactions in the Gulf of Maine
+            Modeling the Dynamics of Multiple Species Interactions
           </div>
           <div className="sub-heading">
-            Lucy Van Kleunen, Henry Li, Luis de Pablo, Laura Dee, Allison Barner
+            presented at ESA Annual Meeting 2025
+          </div>
+          <div className="sub-heading">
+            w/ Henry Li, Luis de Pablo, Allison Barner, Laura Dee, Aaron Clauset
           </div>
           {expandedProjects["species-interactions"] && (
             <div className="text">
-              Studying the intricate relationships among species within complex
+              Studying the intricate relationships among species within
               ecosystems offers valuable insights into the mechanisms driving
-              ecological dynamics and the impacts of human-induced changes to
-              ecosystems. Feeding relationships are commonly studied and
-              describe the flow of energy through an ecosystem. The Allometric
-              Trophic Network (ATN) model is widely used to simulate these
-              feeding (trophic) interactions in ecological networks and
-              emphasizes the body mass scaling of individual species and body
-              mass ratio of predator-prey interactions. While ATN models often
-              exclude non-trophic interactions for simplicity, previous studies
-              on the Chilean rocky intertidal ecosystem reveal the significance
-              of non-trophic interactions (such as competition for space and
-              predator interference) in shaping species relationships, primarily
-              among basal and sessile species. Further, positive interactions
-              (such as refuge provisioning and recruitment facilitation) can
-              increase survival and protection for certain species, enhance
-              community diversity, and improve resource utilization and
-              ecological resilience. We extended the traditional ATN model to
-              incorporate various non-trophic interaction types in order to
-              enhance our understanding of ecosystem stability and our ability
-              to predict ecosystem responses to disturbances.
+              ecological dynamics. Dynamic systems models, such as the
+              Lotka-Volterra equations and the allometric trophic network (ATN)
+              model, are commonly used to simulate species interactions and
+              predict ecosystem change over time. However, these models often
+              overlook essential non-trophic (non-feeding) interactions, such as
+              recruitment facilitation and refuge provisioning, which can
+              significantly influence species persistence and community
+              structure. In this project, we illustrate the challenges in
+              incorporating non-trophic interactions into dynamic ecosystem
+              models. We then identify a framework to reduce the uncertainties
+              that arise in parameter estimation and model structure in order to
+              constrain an ensemble of ecosystem models. Through these
+              ensembles, we aim to enhance improve predictions of ecosystem
+              response to management actions in order to inform better
+              conservation and restoration strategies.
             </div>
           )}
-          <img src={EcoNetworkImg} alt="Ecological Network" />
+          {/* <img src={EcoNetworkImg} alt="Ecological Network" /> */}
         </div>
         <div className="project">
           <div
@@ -60,45 +64,33 @@ const Research = () => {
             Visualizing Structural Variants in the Humane Genome
           </div>
           <div className="sub-heading">
-            Behzod Mirpochoev, Kit Lewers, Aaron Clauset
+            w/ Muhrad Chowdhury, Ryan Layer, Aaron Clauset
           </div>
           {expandedProjects["structural-variants"] && (
             <div className="text">
-              Structural variants (SVs) are alterations in the DNA involving
-              segments longer than a single nucleotide, typically exceeding 100
-              base pairs. They result from insertions, deletions, duplications,
-              inversions, and translocations in the DNA sequence. These
-              mutations can significantly impact gene expression, genetic
-              diversity, and disease susceptibility. Notably, singletons–SVs
-              observed only once within a population–are particularly
-              significant as they represent rare or novel variants. Identifying
-              singletons and uncommon SVs not only offers insights into the
-              diversity of SVs within certain DNA regions but can also inform
-              the prevalence of rare and severe diseases, affecting mortality or
-              reproductive functions. Therefore, accurately determining the
-              number of SVs within a DNA reading frame is crucial for
-              understanding their biological consequences. Gaussian mixture
-              models (GMMs) provide a probabilistic framework to model the
-              distribution of sequence variation, enabling the estimation of the
-              number of SVs and their distributions. While statistical methods
-              like GMMs may not be flawless, they are made more powerful by
-              combining methods of k-means clustering and
-              expectation-maximization to better inform the GMMs, providing a
-              systematic approach to make sense of noisy genetic data. These
-              methods contribute to advancing our understanding of structural
-              variants and their role in shaping the genome, with potential
-              applications in disease diagnosis and treatment.
+              Structural variants (SVs) are large-scale rearrangements in the
+              genome that are associated with a wide range of Mendelian
+              disorders, cancers, and complex diseases. Correctly identifying
+              SVs and characterizing their allele frequencies is a necessary
+              step to understand their impact on such diseases. However,
+              existing methods for comparing SVs aim to reduce false positives,
+              resulting in over-merging and extensive filtering of potential
+              real SVs. In this project, we introduce an unsupervised machine
+              learning method that can distinguish closely located SVs based on
+              statistical evidence from short-read sequencing data. We applied
+              our method to the 1000 Genomes Project dataset to identify
+              previously undetected SVs and characterize their allele
+              frequencies and distribution by population haplotype.
             </div>
           )}
-          <img src={SVGif} alt="Gaussian Mixture Model" />
+          {/* <img src={SVGif} alt="Gaussian Mixture Model" /> */}
         </div>
         <div className="project">
           <div className="title" onClick={() => toggleExpand("tau")}>
             Modeling Tau Spread Across a Neuronal Network
           </div>
           <div className="sub-heading">
-            Grace Bowman, Chanin Kumpeerakij, Roy Parker, Dan Larremore, Meaghan
-            Van Alstyne
+            w/ Grace Bowman, Chanin Kumpeerakij, Roy Parker, Dan Larremore
           </div>
           {expandedProjects["tau"] && (
             <div className="text">
@@ -130,7 +122,7 @@ const Research = () => {
           <div className="title" onClick={() => toggleExpand("social-evo")}>
             Modeling the Evolution of Social Foraging Behavior
           </div>
-          <div className="sub-heading">Mike Gil</div>
+          <div className="sub-heading">w/ Mike Gil</div>
           {expandedProjects["social-evo"] && (
             <div className="text">
               Organisms are constantly producing information through active

@@ -16,7 +16,7 @@ const About = () => {
     <div className="about-page page-content">
       <div className="text-container">
         <p>
-          <span className="name">Hi, I'm Vivian.</span> I'm a 2nd year Ph.D.
+          <span className="name">Hi, I'm Vivian.</span> I'm a 3rd year Ph.D.
           student at the University of Colorado Boulder. I'm advised by{" "}
           <span
             className="link"
@@ -32,13 +32,17 @@ const About = () => {
             Laura Dee
           </span>{" "}
           in the Department of Ecology and Evolutionary Biology. For my
-          research, I model ecological networks and species interactions. I'm
-          interested in predicting ecosystem response to disturbances, such as
-          changes induced by climate change or human intervention. I also study
-          relationships between species, observing how species interact for
-          feeding and non-feeding purposes. I love using math and computation to
-          understand different ecosystems, and I'm interested in pursuing work
-          in ecological modeling & species conservation.
+          research, <b>I model the dynamics of ecological networks</b>,
+          particuarly those with multiple interaction types (i.e. feeding and
+          non-feeding interactions). I'm interested in what makes an ecosystem
+          stable, how ecosystems respond to disturbances, and how to plan
+          effective conservation and restoration strategies under uncertainty. I
+          enjoy exploring new mathematical and computational methods to answer
+          these questions, and{" "}
+          <b>
+            I'm interested in pursuing work in any form of ecological modeling &
+            conservation.
+          </b>
         </p>
         <p>
           I was an NSF Research Trainee with the{" "}
@@ -77,8 +81,8 @@ const About = () => {
             alt="Allen Island, ME"
           />
           <div>
-            My first trip out to our study site in the rocky intertidal zone in
-            the Gulf of Maine!
+            My first trip out to our rocky intertidal study site in the Gulf of
+            Maine
           </div>
         </div>
         <p>

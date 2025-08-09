@@ -17,7 +17,7 @@ const Footer = () => {
             />
           </a>
         </div>
-        <p className="copy">&copy; 2024 Vivian Li</p>
+        <p className="copy">&copy; 2025 Vivian Li</p>
       </footer>
     </div>
   );

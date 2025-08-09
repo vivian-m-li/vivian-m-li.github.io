@@ -15,6 +15,10 @@ const Nav = () => {
           </Link>
         </div>
         <div className="nav-right">
+          <Link className="link" to="/home">
+            Home
+          </Link>
+          <span className="divider">|</span>
           <Link className="link" to="/about">
             About
           </Link>

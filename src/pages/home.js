@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-materialize";
 import HomeImage from "../images/home.jpg";
 import Resume from "../uploads/resume.pdf";
+import CV from "../uploads/cv.pdf";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -22,8 +23,9 @@ const Home = () => {
               </li>
               <li>
                 <i class="tiny material-icons">chevron_right</i>
-                Interested in ecological networks and writing open source code
-                for scientists
+                Interested in modeling ecological networks and dynamics for
+                decision-making under uncertainty. In support of writing open
+                source code for scientists
               </li>
               <li>
                 <i class="tiny material-icons">chevron_right</i>Former
@@ -39,6 +41,7 @@ const Home = () => {
             <Button onClick={() => window.open(Resume, "_blank")}>
               Resume
             </Button>
+            <Button onClick={() => window.open(CV, "_blank")}>CV</Button>
             <Button>
               <Link className="link" to="/about">
                 About
