@@ -22,26 +22,27 @@ const About = () => {
             className="link"
             onClick={() => openExternalLink("https://aaronclauset.github.io/")}
           >
-            Aaron Clauset
+            Dr. Aaron Clauset
           </span>{" "}
           in the Department of Computer Science and{" "}
           <span
             className="link"
             onClick={() => openExternalLink("https://www.lauraedee.com/")}
           >
-            Laura Dee
+            Dr. Laura Dee
           </span>{" "}
-          in the Department of Ecology and Evolutionary Biology. For my
-          research, <b>I model the dynamics of ecological networks</b>,
-          particuarly those with multiple interaction types (i.e. feeding and
-          non-feeding interactions). I'm interested in what makes an ecosystem
-          stable, how ecosystems respond to disturbances, and how to plan
-          effective conservation and restoration strategies under uncertainty. I
-          enjoy exploring new mathematical and computational methods to answer
-          these questions, and{" "}
+          in the Department of Ecology and Evolutionary Biology. I'm interested
+          in how mathematical and computational tools can explain the complexity
+          of biological systems, with a focus on ecosystem dynamics. I use
+          mathematical models, machine learning, and network science to study
+          species interactions and the structure of ecological communities.
+          Furthermore, I develop methods to reduce model unceertainty and
+          translate these models into practical ecosystem management strategies.
+          My research sits at the intersection of Ecology and Computer Science,
+          and{" "}
           <b>
-            I'm interested in pursuing work in any form of ecological modeling &
-            conservation.
+            I'm interested in pursuing work related to ecological/environmental
+            modeling & conservation.
           </b>
         </p>
         <p>

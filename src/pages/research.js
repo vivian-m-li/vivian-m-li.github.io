@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import EcoNetworkImg from "../images/deelab.png";
+import DDaysPoster from "../images/ddays_poster.pdf";
 import SVGif from "../images/sv.gif";
+import { Button, Icon } from "react-materialize";
 
 const Research = () => {
   const [expandedProjects, setExpandedProjects] = useState({
@@ -28,10 +29,18 @@ const Research = () => {
             Modeling the Dynamics of Multiple Species Interactions
           </div>
           <div className="sub-heading">
-            presented at ESA Annual Meeting 2025
+            <b>Vivian Li</b>, Luis de Pablo, Henry Li, Laura Dee, Aaron Clauset
           </div>
           <div className="sub-heading">
-            w/ Henry Li, Luis de Pablo, Allison Barner, Laura Dee, Aaron Clauset
+            presented at ESA Annual Meeting 2025 & Dynamics Days Conference 2026
+            <Button
+              className="icon-link"
+              onClick={() => window.open(DDaysPoster, "_blank")}
+            >
+              <Icon small className="open-link">
+                open_in_new
+              </Icon>
+            </Button>
           </div>
           {expandedProjects["species-interactions"] && (
             <div className="text">
@@ -54,18 +63,19 @@ const Research = () => {
               conservation and restoration strategies.
             </div>
           )}
-          {/* <img src={EcoNetworkImg} alt="Ecological Network" /> */}
         </div>
         <div className="project">
           <div
             className="title"
             onClick={() => toggleExpand("structural-variants")}
           >
-            Visualizing Structural Variants in the Humane Genome
+            Identifying Structural Variants in the Humane Genome
           </div>
           <div className="sub-heading">
-            w/ Muhrad Chowdhury, Ryan Layer, Aaron Clauset
+            <b>Vivian Li</b>, Ryan Layer, Muhrad Chowdhury, Jake Krol, Hope
+            Townsend, Aaron Clauset
           </div>
+          <div className="sub-heading">Manuscript in preparation</div>
           {expandedProjects["structural-variants"] && (
             <div className="text">
               Structural variants (SVs) are large-scale rearrangements in the
@@ -90,7 +100,8 @@ const Research = () => {
             Modeling Tau Spread Across a Neuronal Network
           </div>
           <div className="sub-heading">
-            w/ Grace Bowman, Chanin Kumpeerakij, Roy Parker, Dan Larremore
+            <b>Vivian Li</b>, Grace Bowman, Chanin Kumpeerakij, Roy Parker,
+            Daniel Larremore
           </div>
           {expandedProjects["tau"] && (
             <div className="text">
@@ -122,7 +133,9 @@ const Research = () => {
           <div className="title" onClick={() => toggleExpand("social-evo")}>
             Modeling the Evolution of Social Foraging Behavior
           </div>
-          <div className="sub-heading">w/ Mike Gil</div>
+          <div className="sub-heading">
+            <b>Vivian Li</b>, Mike Gil
+          </div>
           {expandedProjects["social-evo"] && (
             <div className="text">
               Organisms are constantly producing information through active

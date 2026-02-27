@@ -24,8 +24,8 @@ const Home = () => {
               <li>
                 <i class="tiny material-icons">chevron_right</i>
                 Interested in modeling ecological networks and dynamics for
-                decision-making under uncertainty. In support of writing open
-                source code for scientists
+                ecosystem management. In support of writing open source code for
+                scientists
               </li>
               <li>
                 <i class="tiny material-icons">chevron_right</i>Former
